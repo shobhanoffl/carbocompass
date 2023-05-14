@@ -24,8 +24,9 @@ class _DashboardState extends State<Dashboard> {
   @override
   Widget build(BuildContext context) {
     final List<Score> scores = [
-      Score(name: 'Today\'s Emission', score: 80),
-      Score(name: 'Your Balance', score: 120)
+      Score(name: 'Today\'s Emission', score: 40),
+      Score(name: 'Your Balance', score: 120),
+      Score(name: 'Citizen Ranking', score: 1006),
     ];
     return Scaffold(
       appBar: AppBar(
@@ -91,60 +92,27 @@ class _DashboardState extends State<Dashboard> {
               },
             ),
           ),
-          HorizontalCard("hello", "haii"),
-          Expanded(
-            child: ListView.builder(
-              itemCount: 20,
-              itemBuilder: (context, index) {
-                return Card(
-                  margin: EdgeInsets.all(8.0),
-                  child: Stack(
-                    children: [
-                      Positioned.fill(
-                        child: Image.network(
-                          'https://picsum.photos/id/${index + 100}/200/300',
-                          fit: BoxFit.cover,
-                        ),
-                      ),
-                      Padding(
-                        padding: EdgeInsets.all(16.0),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                              'Details ${index + 1}',
-                              style: TextStyle(
-                                fontSize: 24.0,
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
-                            SizedBox(height: 8.0),
-                            Text(
-                              'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at quam a magna vulputate posuere. In hac habitasse platea dictumst.',
-                              style: TextStyle(fontSize: 16.0),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ],
-                  ),
-                );
-              },
-            ),
-          ),
+          HorizontalCard("Today you travelled", "120 km",
+              "https://img.freepik.com/free-vector/winter-blue-pink-gradient-background-vector_53876-117275.jpg"),
+          HorizontalCard("Today you emitted", "38.4 kg",
+              "https://img.freepik.com/free-vector/winter-blue-pink-gradient-background-vector_53876-117275.jpg"),
+          HorizontalCard("This month you planted", "10 Plants",
+              "https://images.unsplash.com/photo-1579546929518-9e396f3cc809?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8&w=1000&q=80"),
+          HorizontalCard("Per day these Plants absorbs", "200 grams",
+              "https://images.unsplash.com/photo-1579546929518-9e396f3cc809?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8&w=1000&q=80"),
         ],
       ),
     );
   }
 
-  HorizontalCard(line1, line2) {
+  HorizontalCard(line1, line2, imglink) {
     return Card(
       margin: EdgeInsets.all(8.0),
       child: Stack(
         children: [
           Positioned.fill(
             child: Image.network(
-              'https://picsum.photos/id/100/200/300',
+              imglink,
               fit: BoxFit.cover,
             ),
           ),
@@ -155,15 +123,15 @@ class _DashboardState extends State<Dashboard> {
               children: [
                 Text(
                   line1,
-                  style: TextStyle(
-                    fontSize: 24.0,
-                    fontWeight: FontWeight.bold,
-                  ),
+                  style: TextStyle(fontSize: 16.0),
                 ),
                 SizedBox(height: 8.0),
                 Text(
                   line2,
-                  style: TextStyle(fontSize: 16.0),
+                  style: TextStyle(
+                    fontSize: 24.0,
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
               ],
             ),
