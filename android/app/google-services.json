@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "113422087729",
+    "project_id": "carbocompass",
+    "storage_bucket": "carbocompass.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:113422087729:android:1aa521f1a03f1b7c258710",
+        "android_client_info": {
+          "package_name": "com.example.climateapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "113422087729-aaj5la62eqf19vrm4lbcjuf5dbdc46u1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.climateapp",
+            "certificate_hash": "a506e1bd94f55df76d5138ffafb15442f6457221"
+          }
+        },
+        {
+          "client_id": "113422087729-0rknh9pl7pqq40paukk5m7l5erpcos6j.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA1HiIIZxRcqnYHEMyK3SnE6nW90BVy_UE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "113422087729-0rknh9pl7pqq40paukk5m7l5erpcos6j.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
